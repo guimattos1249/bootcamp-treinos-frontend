@@ -101,7 +101,7 @@ export type CreateWorkoutPlanBodyWorkoutDaysItem = {
   name: string;
   weekDay: CreateWorkoutPlanBodyWorkoutDaysItemWeekDay;
   isRest?: boolean;
-  /** @minimum 1 */
+  /** @minimum 0 */
   estimatedDurationInSeconds: number;
   coverImageUrl?: string;
   exercises: CreateWorkoutPlanBodyWorkoutDaysItemExercisesItem[];
@@ -144,7 +144,7 @@ export type CreateWorkoutPlan201WorkoutDaysItem = {
   name: string;
   weekDay: CreateWorkoutPlan201WorkoutDaysItemWeekDay;
   isRest: boolean;
-  /** @minimum 1 */
+  /** @minimum 0 */
   estimatedDurationInSeconds: number;
   coverImageUrl?: string;
   exercises: CreateWorkoutPlan201WorkoutDaysItemExercisesItem[];

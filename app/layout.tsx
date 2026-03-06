@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
+import { Suspense } from "react";
+import { Chat } from "./_components/chat";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,7 +30,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <NuqsAdapter>
+          {children}
+          <Suspense>
+            <Chat />
+          </Suspense>
+        </NuqsAdapter>
       </body>
     </html>
   );
